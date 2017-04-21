@@ -55,7 +55,7 @@ class MainPage(Handler):
             id = a.key().id()
             self.redirect("/newpost")
         else:
-            error="We need both a title and body!"
+            error="You need both a title and body!"
             self.render_NewPost(title, body, error)
 
 class NewPostHandler(Handler):
@@ -74,7 +74,7 @@ class NewPostHandler(Handler):
             id = post.key().id()
             self.redirect("/newpost/%s" %d)
         else:
-            error="We need both a title and body!"
+            error="You need both a title and body!"
             self.render_NewPost(title, body, error)
 
 class ViewPostHandler(Handler):
